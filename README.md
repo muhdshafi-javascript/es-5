@@ -14,10 +14,11 @@ var name = 'Shafi';
 var age = 31;
 console.log(name + ' ' + age);//here age is converted to a String
 ```
-Re-assigning the value to variable is calle **Variable Mutation**, javaScript dynamically change type based on the new value assigned.
+Re-assigning the value to variable is called **Variable Mutation**, javaScript dynamically change type based on the new value assigned.
 ```javascript
 var age = 31;
 console.log(typeof age, age);//number
  age = '31';
 console.log(typeof age, age);//string
 ```
+### Truthy and Falsy 
