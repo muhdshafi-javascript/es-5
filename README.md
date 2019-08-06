@@ -22,3 +22,10 @@ console.log(typeof age, age);//number
 console.log(typeof age, age);//string
 ```
 ### Truthy and Falsy 
+Falsy vakues are as given below 
+1. **false**: boolean false
+2. **0**: number 0
+3. **'', "", ``**: Empty string
+4. **null**: non existence
+5. **undefined**: unassigned but variable is declared.
+6. **NaN**: not a number
