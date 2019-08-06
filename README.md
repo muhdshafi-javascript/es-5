@@ -7,3 +7,10 @@ Javascript support dynamic typing, it auatomatically figure out the type.
 3. **Boolean**: true or false (True and TRUE are invalid)
 4. **Undefined**: varaible that doesn't have any value yet 
 5. **Null**: non-existence (NULL and Null are invalid)
+### Variable Mutation and Type Coercion
+Type coercion is the process of converting value from one type to another (such as string to number, object to boolean, and so on).
+```javascript
+var name = 'Shafi';
+var age = 31;
+console.log(name + ' ' + age);//here age is converted to a String
+```
