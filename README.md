@@ -130,6 +130,10 @@ console.log(string1);
            var avg = function (num1, num2) {
                return (num1 + num2)/2;
            }
+           
+           console.log(age); // gives undefined
+           console.log(address); //give error as 'address is not defined'
+           var age = 31;
         ```
     - Creation of Scope chain
     - Determine the value of *this*
