@@ -113,10 +113,10 @@ console.log(string1);
   - Scope chain (VO and VO of parent)
   - *this* variable
 - Phases of Execution context  
-  - Creation phase
+  - **Creation phase**
     - creation of VO
     - Creation of Scope chain
     - Determine the value of *this*
-  - Execution phase
+  - **Execution phase**: 
     The code of the funtion that generated the execution context run line by line.
   
