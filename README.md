@@ -97,3 +97,13 @@ console.log(string1);
 ```
 - for...in consider enumerable the properties from prototype as well.
 - Object.keys() and Object.getOwnPropertyNames() consider only the own properties
+
+## How JavaScript works behind the scene
+- Javascript engine execute the code(eg:V8)
+  - Parseed by a Parser (check syntax, if everything is fine it produces a data struxture known as Abstract Syntax Tree)
+  - Then Convert it to Machine code
+  - Code runs  
+### Execution Context and Execution Stack
+- **Execution context** is container which stores variables and in which a piece of our code is evaluated and executed.
+- **Global Execution Context** is default context where the code placed outside any function is executed(window object in browser).
+- when function is invoked a new execution context is added on top of the global execution context, when another funtion is invoked from the 1st funtion another execution context is added on top of the existing one and so on. When a funtion execution is done the curresponding execution context is removed from the stack.
