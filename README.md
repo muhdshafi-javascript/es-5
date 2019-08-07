@@ -119,9 +119,20 @@ console.log(string1);
       - The argument object is created which contains all the args passed.
       - Code is scanned for **funtion declarations**, for each function, a property is created in the Variable object and point it to the funtion.
       - Code is scanned for **Variable declarations**, for each varible, a property is created in the VO and set to "undefined"
-      - The 2nd and 3rd points together is called as **Hoisting**, in practice, we can invoke funtion which is declared below in the code and still it works, it is poosible beacuse all the varibales and functions are Hoisted before the execution phase.
+      - The 2nd and 3rd points together is called as **Hoisting**, in practice, we can invoke funtion which is declared below in the code and still it works, it is possible beacuse all the varibales and functions are Hoisted before the execution phase. **Hoisting** works only for *funtion declaration* not for *funtion expression*.
+        ```javascript
+           console.log(sum(5, 10)); // gives 15
+           function sum(num1, num2) {
+               return num1 + num2;
+           }
+
+           console.log(avg(5, 10)); // gives error as 'avg is not a function'
+           var avg = function (num1, num2) {
+               return (num1 + num2)/2;
+           }
+        ```
     - Creation of Scope chain
     - Determine the value of *this*
   - **Execution phase**: 
     The code of the funtion that generated the execution context run line by line.
-  
+
