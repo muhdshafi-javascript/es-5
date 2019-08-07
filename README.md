@@ -121,6 +121,7 @@ console.log(string1);
       - Code is scanned for **Variable declarations**, for each varible, a property is created in the VO and set to "undefined"
       - The 2nd and 3rd points together is called as **Hoisting**, in practice, we can invoke funtion which is declared below in the code and still it works, it is possible beacuse all the varibales and functions are Hoisted before the execution phase. **Hoisting** works only for *funtion declaration* not for *funtion expression*.
         ```javascript
+           //Hoisting for functions
            console.log(sum(5, 10)); // gives 15
            function sum(num1, num2) {
                return num1 + num2;
@@ -131,9 +132,21 @@ console.log(string1);
                return (num1 + num2)/2;
            }
            
+           //Hoisting for variables
            console.log(age); // gives undefined
            console.log(address); //give error as 'address is not defined'
            var age = 31;
+           
+           //Hoisting and Scope together
+           console.log(color);     //undefined
+           var color = 'red';
+           function foo(){
+               console.log(color); //undefined
+               var color = 'green';
+               console.log(color); //green
+           }
+           foo();
+           console.log(color);     //red
         ```
     - Creation of Scope chain
     - Determine the value of *this*
