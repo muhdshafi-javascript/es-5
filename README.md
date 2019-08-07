@@ -165,33 +165,36 @@ console.log(string1);
 - Scope chain is determined by the order in which the funtion is declared in the code.
 ### The *this*
   ```javascript
-      console.log(this);              //window object
-      function sum(n1, n2){
-          console.log(this);          //*
-          return n1 + n2;
-      }
-      console.log(sum(1, 2));         // regular function call. * is window object
+  console.log(this);              //window object
+function sum(n1, n2){
+    console.log(this);          //*
+    return n1 + n2;
+}
+console.log(sum(1, 2));         // regular function call. * is window object
 
-      var person = {
-          name : 'Shafi',
-          getName: function(){
-              console.log(this)       //** 
-              return this.name;
-          }
-      }
-      console.log(person.getName());  // method call, ** is person object
+var person = {
+    name : 'Shafi',
+    getName: function(){
+        console.log(this)       //** 
+        return this.name;
+    }
+}
+console.log(person.getName());  // method call, ** is person object
 
-      var employee = {
-          printName: function(){
-              var getNameLocal = person.getName;
-              console.log(getNameLocal());               // regular call, ** is window object
-          }
-      }
+var employee = {
+    printName: function(){
+        var getNameLocal = person.getName;
+        console.log(person.getName()); // method call, ** is person object
+        console.log(getNameLocal());   // regular call, ** is window object
+    },
+    empName : person.getName
+}
 
-      employee.printName();
+console.log(employee.empName());   // method call. ** is employee object
+employee.printName();
 
-      var getName = person.getName;   
-      console.log(getName());         // calling execution context global context
-                                      // ** is window object, unexpected result
+var getName = person.getName;   
+console.log(getName());         // calling execution context global context
+                                // ** is window object, unexpected result
   ```
 
