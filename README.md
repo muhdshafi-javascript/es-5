@@ -151,7 +151,13 @@ console.log(string1);
            console.log(color);     //red
         ```
     - Creation of Scope chain
+      - In JavaSript scope is defined by funtion, not by *if* or *loops* unlike in other languages.
+      - Each new funtion create a new scope.
+      - **Lexical scope**:a function also has access to it's encolosing funtion's scope.
     - Determine the value of *this*
   - **Execution phase**: 
     The code of the funtion that generated the execution context run line by line.
+### Execution stack vs Scope chain
+- Execution stack is determined by the order in which the funtions invoked.
+- Scope chain is determined by the order in which the funtion is declared in the code.
 
