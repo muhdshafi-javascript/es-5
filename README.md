@@ -107,3 +107,4 @@ console.log(string1);
 - **Execution context** is container which stores variables and in which a piece of our code is evaluated and executed.
 - **Global Execution Context** is default context where the code placed outside any function is executed(window object in browser).
 - when function is invoked a new execution context is added on top of the global execution context, when another funtion is invoked from the 1st funtion another execution context is added on top of the existing one and so on. When a funtion execution is done the curresponding execution context is removed from the stack.
+- **Execution stack** also known as “calling stack”, is a stack with a LIFO structure, which is used to store all the execution context created during the code execution.
