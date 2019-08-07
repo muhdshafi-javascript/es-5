@@ -1,4 +1,5 @@
-# ES-5
+# ES-5 
+A short note for self learing purpose.
 ## Javascript Basics
 ### Variable and Data types
 Javascript support dynamic typing, it auatomatically figure out the type.
@@ -115,6 +116,10 @@ console.log(string1);
 - Phases of Execution context  
   - **Creation phase**
     - creation of VO
+      - The argument object is created which contains all the args passed.
+      - Code is scanned for **funtion declarations**, for each funtion, a property is created in the Variable object pointed to the funtion.
+      - Code is scanned for **Variable declarations**, for each varible, a property is created in the VO and set to "undefined"
+      - The 2nd and 3rd points together is called as **Hoisting**
     - Creation of Scope chain
     - Determine the value of *this*
   - **Execution phase**: 
