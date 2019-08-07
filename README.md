@@ -118,3 +118,5 @@ console.log(string1);
     - Creation of Scope chain
     - Determine the value of *this*
   - Execution phase
+    The code of the funtion that generated the execution context run line by line.
+  
