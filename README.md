@@ -36,11 +36,12 @@ Falsy vakues are as given below
 6. **NaN**: not a number
 ## Function Statements and Function Expressions
 Globally in javascript, statements doesn't return anything but an expression return a value.
-examples for expression are 
-1. invoke a function
-2. execute 2+3 in console which gives the sum
-examples of statements are
-1. if(true){} in console
+Examples for expression are 
+ 1. invoke a function
+ 2. execute 2+3 in console which gives the sum.
+ 
+Examples of statements are
+ 1. if(true){} in console
 
 ```javascript
 //funtion statement
