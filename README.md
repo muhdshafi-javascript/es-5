@@ -53,29 +53,47 @@ var funcExpn = function(){}
 //a single array can hold values of different data types. 
 var arr = [true, 31, '31', undefined, null];
 console.log(arr);
-.
+
 //Print array elements
 console.log(arr.toString());
 //note that undefined and null didn't print
-.
+
 //add value to the end of the array
 arr.push('shafi');
 console.log(arr);
-.
+
 //add value to the begining of the array
 arr.unshift('Muhd');
 console.log(arr);
-.
+
 //remove element from the end
 arr.pop();
 console.log(arr);
-.
+
 //remove element from the begining
 arr.shift();arr.shift();arr.shift();
 console.log(arr);
-.
+
 //check if an element present or find the index
 //Type coercion is not applied here.
 console.log(arr.indexOf(31));
 console.log(arr.indexOf('31'));
 ```
+## Loops
+1. Traditional for, while, do...while
+   - you can use **continue** and **break** 
+2. for...in
+   - iterate over the keys of an object
+```javascript
+var string1 = "";
+var object1 = {a: 1, b: 2, c: 3};
+
+for (var property1 in object1) {
+  string1 += object1[property1];
+}
+
+console.log(string1);
+// expected output: "123"
+```
+- for...in consider enumerable the properties from prototype as well.
+- Object.keys() and Object.getOwnPropertyNames() consider only the own properties
