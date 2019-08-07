@@ -2,7 +2,7 @@
 A short note for self learing purpose.
 ## Javascript Basics
 ### Variable and Data types
-Javascript support dynamic typing, it auatomatically figure out the type.
+Javascript support dynamic typing, it automatically figure out the type.
 1. **Number**: Floating point number
 2. **String**: seaquence of chars (var x = 1+2+'3'+4; until a string found in left to right scan, consider it as a number)
 3. **Boolean**: true or false (True and TRUE are invalid)
@@ -35,7 +35,7 @@ Falsy vakues are as given below
 5. **undefined**: unassigned but variable is declared.
 6. **NaN**: not a number
 ## Function Statements and Function Expressions
-Globally in javascript statements doesn't return anything but an expression return a value.
+Globally in javascript, statements doesn't return anything but an expression return a value.
 examples for expression are 
 1. invoke a function
 2. execute 2+3 in console which gives the sum
