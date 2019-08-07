@@ -155,9 +155,43 @@ console.log(string1);
       - Each new funtion create a new scope.
       - **Lexical scope**:a function also has access to it's encolosing funtion's scope.
     - Determine the value of *this*
+      - **Regular function call**: the *this* keyword points to the global object(window in browser)
+      - **Method call**: the *this* keyword points to the object that is calling the method.
+      - The *this* keyword is not assigned a value until the funtion which created the execution context is called.
   - **Execution phase**: 
     The code of the funtion that generated the execution context run line by line.
 ### Execution stack vs Scope chain
 - Execution stack is determined by the order in which the funtions invoked.
 - Scope chain is determined by the order in which the funtion is declared in the code.
+### The *this*
+  ```javascript
+      console.log(this);              //window object
+      function sum(n1, n2){
+          console.log(this);          //*
+          return n1 + n2;
+      }
+      console.log(sum(1, 2));         // regular function call. * is window object
+
+      var person = {
+          name : 'Shafi',
+          getName: function(){
+              console.log(this)       //** 
+              return this.name;
+          }
+      }
+      console.log(person.getName());  // method call, ** is person object
+
+      var employee = {
+          printName: function(){
+              var getNameLocal = person.getName;
+              console.log(getNameLocal());               // regular call, ** is window object
+          }
+      }
+
+      employee.printName();
+
+      var getName = person.getName;   
+      console.log(getName());         // calling execution context global context
+                                      // ** is window object, unexpected result
+  ```
 
