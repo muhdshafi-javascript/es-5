@@ -197,4 +197,5 @@ var getName = person.getName;
 console.log(getName());         // calling execution context global context
                                 // ** is window object, unexpected result
   ```
+##DOM Manipulation
 
