@@ -197,5 +197,14 @@ var getName = person.getName;
 console.log(getName());         // calling execution context global context
                                 // ** is window object, unexpected result
   ```
-##DOM Manipulation
+##  DOM Manipulation
+### Events
+Notifications that are sent when something happens on the web page.
+### Event listener
+Funtions that perform when certain event occures, it waits for a specific event to happen.
+### Execution Stack and Message Queue
+An event can be handled only after the executiuon stack become empty, which means all the funtions have returned. 
+**Message queue:** this is where all the events happened that are waiting to be processed kept. when the execution stack becomes empty, the event handler corespoding to one of the event in the message queue start execute and new execution context will be created for it. once the execution completes and execution stack becomes empty again, next event from the queue will be processed. 
+
+
 
