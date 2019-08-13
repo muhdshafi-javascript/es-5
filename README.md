@@ -206,5 +206,10 @@ Funtions that perform when certain event occures, it waits for a specific event 
 An event can be handled only after the executiuon stack become empty, which means all the funtions have returned. 
 **Message queue:** this is where all the events happened that are waiting to be processed kept. when the execution stack becomes empty, the event handler corespoding to one of the event in the message queue start execute and new execution context will be created for it. once the execution completes and execution stack becomes empty again, next event from the queue will be processed. 
 
-
+## TODO
+1. getElementById()
+2. querySelector()
+3. getElementsByClassName()
+4. add/remove/toggle css class in javaScript code, browser compatibility
+5. state variable
 
