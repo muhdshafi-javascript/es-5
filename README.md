@@ -34,6 +34,31 @@ Falsy vakues are as given below
 4. **null**: non existence
 5. **undefined**: unassigned but variable is declared.
 6. **NaN**: not a number
+Easy way to check truthy or falsy
+```javascript
+Boolean(NaN) // false
+Boolean([]) // true
+Boolean({}) // true
+```
+We can turn any value into its truthy or falsy boolean value by flipping it twice:
+```javascript
+let number1;
+console.log(!!number1); // false
+
+const number2 = 10;
+console.log(!!number2); // true
+
+const name1 = 'Tim';
+console.log(!!name1); // true
+
+const name2 = '';
+console.log(!!name2); // false
+
+const nullValue = null;
+console.log(!!nullValue); // false
+```
+https://dev.to/myogeshchavan97/javascript-basics-truthy-and-falsy-values-in-javascript-4jo2
+
 ## Function Statements and Function Expressions
 Globally in javascript, statements doesn't return anything but an expression return a value.
 
