@@ -33,7 +33,7 @@ Falsy vakues are as given below
 3. **'', "", ``**: Empty string
 4. **null**: non existence
 5. **undefined**: unassigned but variable is declared.
-6. **NaN**: not a number
+6. **NaN**: not a number  
 Easy way to check truthy or falsy
 ```javascript
 Boolean(NaN) // false
@@ -127,8 +127,16 @@ for (var property1 in object1) {
 console.log(string1);
 // expected output: "123"
 ```
-- for...in consider enumerable the properties from prototype as well.
-- Object.keys() and Object.getOwnPropertyNames() consider only the own properties
+- for...in consider enumerable the properties from prototype as well(ignoring ones keyed by Symbols).
+- Object.keys() method returns an array of a given object's own enumerable property names, From ES2015 onwards, a non-object argument will be coerced to an object.  
+```javascript
+// In ES5
+Object.keys('foo');  // TypeError: "foo" is not an object
+
+// In ES2015+
+Object.keys('foo');  // ["0", "1", "2"]
+```
+- Object.getOwnPropertyNames() consider all the own properties, including non-enumerables  
 
 ## How JavaScript works behind the scene
 - Javascript engine execute the code(eg:V8)
